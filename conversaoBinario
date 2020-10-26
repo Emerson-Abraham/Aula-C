@@ -1,0 +1,19 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<locale.h>
+
+void printBinario(int);
+
+int main (){
+	setlocale (LC_ALL,"");
+	int v1;
+	printf("Digite o número decimal: ");
+	scanf("%d", &v1);
+	printBinario(v1);
+}
+void printBinario(int x){
+	if(x==0)
+	return;
+	printBinario(x/2);
+	printf("%d\n", x%2);
+}
